@@ -16,7 +16,7 @@ nmap <Leader>p "+p
 " 定义快捷键关闭当前分割窗口
 nmap <Leader>q :q<CR>
 " 定义快捷键保存当前窗口内容
-nmap <Leader>w :w<CR>
+"conflict with easy motion nmap <Leader>w :w<CR>
 " 定义快捷键保存所有窗口内容并退出 vim
 nmap <Leader>WQ :wa<CR>:q<CR>
 " 不做任何保存，直接退出 vim
@@ -90,6 +90,8 @@ Plugin 'tpope/vim-eunuch'
 Plugin 'mileszs/ack.vim'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'rdnetto/YCM-Generator'
+Plugin 'tpope/vim-fugitive'
+
 " 插件列表结束
 call vundle#end()
 filetype plugin indent on
@@ -212,6 +214,7 @@ let g:ycm_python_binary_path = 'python'
 "let g:ycm_log_level = 'debug'
 nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>gr :YcmCompleter GoToReferences<CR>
 nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " nerdtree
@@ -245,3 +248,10 @@ nmap <Leader>L <Plug>(easymotion-overwin-line)
 map  <Leader>w <Plug>(easymotion-bd-w)
 map  <Leader>e <Plug>(easymotion-bd-e)
 nmap <Leader>w <Plug>(easymotion-overwin-w)
+nmap <Leader>e <Plug>(easymotion-overwin-e)
+
+" tagbar
+nmap <Leader>tt :TagbarToggle<CR>
+
+" fugitive
+nmap <Leader>gb :Gblame<CR>
