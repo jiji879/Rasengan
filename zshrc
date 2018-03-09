@@ -95,3 +95,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
 export SERVICE_DISCOVERY_URI=consul://platform02.dev.rack.zhihu.com
+alias ll="ls -al"
+alias or="openresty"
+alias luajitrocks="/usr/local/Cellar/openresty/1.11.2.3/luajit/bin/luajit"
+alias nv="nvim"
+alias ngx="nginx"
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
