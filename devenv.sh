@@ -29,3 +29,8 @@ brew install mysql
 
 # nginx
 brew install nginx
+
+# iterm2
+wget 'https://iterm2.com/downloads/stable/latest' -O ~/Downloads/iterm2.zip
+unzip !$
+mv iTerm.app /Applications
