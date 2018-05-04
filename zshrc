@@ -93,8 +93,15 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 alias ll="ls -al"
-alias nv="nvim"
+alias vim="nvim"
 alias ngx="nginx"
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+
+#phpctags
+alias phpctags='php /Users/yuhongyu/code/php/phpctags.phar'
+
+# go
+export GOPATH=/Users/yuhongyu/go
+export PATH=$PATH:$GOPATH/bin
