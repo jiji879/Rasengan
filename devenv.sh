@@ -1,5 +1,10 @@
 #!/bin/sh
 
+# iterm2
+wget 'https://iterm2.com/downloads/stable/latest' -O ~/Downloads/iterm2.zip
+unzip !$
+mv iTerm.app /Applications
+
 # zsh 默认自带
 brew install zsh
 
@@ -19,10 +24,10 @@ nvim -c PluginInstall -c q  -c q
 sudo pip install virtualenv
 
 # python3
-brew install python3
+sudo brew install python3
 
 # php7 & php-fpm
-brew install php70
+sudo brew install homebrew/php/php70
 
 # mysql
 brew install mysql
@@ -30,7 +35,4 @@ brew install mysql
 # nginx
 brew install nginx
 
-# iterm2
-wget 'https://iterm2.com/downloads/stable/latest' -O ~/Downloads/iterm2.zip
-unzip !$
-mv iTerm.app /Applications
+

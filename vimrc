@@ -1,6 +1,8 @@
 " 定义快捷键的前缀，即<Leader>
 let mapleader=";"
 
+set nocst
+set csto=1 
 " 开启文件类型侦测
 filetype on
 " 根据侦测到的不同类型加载对应的插件
@@ -91,6 +93,12 @@ Plugin 'mileszs/ack.vim'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'rdnetto/YCM-Generator'
 Plugin 'tpope/vim-fugitive'
+Plugin 'shawncplus/phpcomplete.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'jacoborus/tender.vim'
+Plugin 'ajmwagar/vim-deus'
+Plugin 'AlessandroYorba/Alduin'
+"Plugin 'lvht/phpcd.vim'
 
 " 插件列表结束
 call vundle#end()
@@ -118,7 +126,7 @@ set laststatus=2
 " 显示光标当前位置
 set ruler
 " 开启行号显示
-"set number
+set number
 set relativenumber!
 " 高亮显示当前行/列
 set cursorline
@@ -256,3 +264,25 @@ nmap <Leader>tt :TagbarToggle<CR>
 
 " fugitive
 nmap <Leader>gb :Gblame<CR>
+
+let g:acp_enableAtStartup = 0
+autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
+let g:phpcomplete_relax_static_constraint = 1
+let g:phpcomplete_mappings = {
+   \ 'jump_to_def_split': '<C-W><C-]>',
+   \ 'jump_to_def_vsplit': '<C-W><C-\>',
+   \}
+
+set nocscopetag
+
+" nerdtree
+map <Leader>n :NERDTreeToggle<CR>
+map <Leader>nf :NERDTreeFind<CR>
+
+"tender
+if (has("termguicolors"))
+ set termguicolors
+endif
+"colorscheme tender
+"
+colorscheme deus
