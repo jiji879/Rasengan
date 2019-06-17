@@ -1,0 +1,22 @@
+Host *
+    ServerAliveInterval 240
+
+Host yuhongyu2
+    HostName 10.179.27.189
+    User xiaoju
+    ForwardAgent yes
+
+Host common 
+    HostName 10.179.23.41
+    User xiaoju
+    ForwardAgent yes
+
+Host hzad2
+    HostName 39.106.121.83
+    User root
+    ForwardAgent yes
+
+Host hzad1
+    HostName 47.93.225.121
+    User root
+    ForwardAgent yes
